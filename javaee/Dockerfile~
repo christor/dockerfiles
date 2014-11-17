@@ -21,7 +21,7 @@ RUN \
 RUN useradd -b /opt -m -s /bin/bash glassfish && echo glassfish:glassfish | chpasswd
 
 # add GlassFish to /opt
-RUN cd /opt/glassfish && wget -qO- -O tmp.zip http://dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip && unzip tmp.zip && rm tmp.zip 
+RUN cd /opt/glassfish && wget -qO- -O tmp.zip http://dlc.sun.com.edgesuite.net/glassfish/4.0.1/nightly/latest-glassfish.zip && unzip tmp.zip && rm tmp.zip 
 
 # set owner of /opt/glassfish
 RUN chown -R glassfish:glassfish /opt/glassfish*
